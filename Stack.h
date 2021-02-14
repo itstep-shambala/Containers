@@ -44,6 +44,12 @@ public:
             Func(element);
         }
     }
+    void ForEach(int(*Func)(int))
+    {
+        for (auto i = stack.begin(); i != stack.end(); ++i) {
+            *i = Func(*i);
+        }
+    }
 };
 
 #endif //STACK_STACK_H
