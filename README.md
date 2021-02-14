@@ -15,6 +15,11 @@
     * [Ravesli](https://ravesli.com/urok-175-shablony-klassov/)
     * [Metanit](https://metanit.com/cpp/tutorial/9.1.php)
     * [Хабр](https://habr.com/ru/post/436880/)
+- *Подробнее про UML*
+    * [Wiki]()
+    * [Хабр](https://habr.com/ru/post/458680/)
+    * [YouTube](https://www.youtube.com/playlist?list=PLPPIc-4tm3YTw3FUu75jsW4QgrXopfXhX)
+
 ## Этапы выполнения задания
 1. Сделать форк репозитория - https://github.com/itstep-shambala/Containers - в свой личный аккаунт
 2. Реализовать шаблонный (типизированный) класс `Queue` (очередь)
