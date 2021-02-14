@@ -2,58 +2,44 @@
 #define STACK_STACK_H
 
 #include <vector>
+#include "Container.h"
+#include "IContainer.h"
+#include "IEnumerable.h"
 
 using namespace std;
 
 template<class T>
-class Stack {
-private:
-    vector<T> stack;
+class Stack : public Container<T>, IContainer<T>, IEnumerable<T> {
 public:
-    void Push(T value)
+    void Push(T value) override
     {
-        stack.push_back(value);
+        container.push_back(value);
     }
-    T Pop()
+    T Pop() override
     {
-        auto end = stack.end();
+        auto end = container.end();
         auto temp = *(end-1);
-        stack.pop_back();
+        container.pop_back();
         return temp;
     }
-    bool isEmpty()
+    T Fetch() override
     {
-        if (stack.empty()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    int Size()
-    {
-        return stack.size();
-    }
-    T Fetch()
-    {
-        auto end = stack.end();
+        auto end = container.end();
         auto temp = *(end-1);
         return temp;
     }
-    void ForEach(void(*Func)(T))
+
+    void ForEach(void(*Func)(T)) override
     {
-        for (auto element : stack) {
+        for (auto element : container) {
             Func(element);
         }
     }
-    void ForEach(T(*Func)(T))
+    void ForEach(T(*Func)(T)) override
     {
-        for (auto i = stack.begin(); i != stack.end(); ++i) {
+        for (auto i = container.begin(); i != container.end(); ++i) {
             *i = Func(*i);
         }
-    }
-    void Clear()
-    {
-        stack.clear();
     }
 };
 
