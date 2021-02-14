@@ -5,15 +5,16 @@
 
 using namespace std;
 
+template<class T>
 class Stack {
 private:
-    vector<int> stack;
+    vector<T> stack;
 public:
-    void Push(int value)
+    void Push(T value)
     {
         stack.push_back(value);
     }
-    int Pop()
+    T Pop()
     {
         auto end = stack.end();
         auto temp = *(end-1);
@@ -32,23 +33,27 @@ public:
     {
         return stack.size();
     }
-    int Fetch()
+    T Fetch()
     {
         auto end = stack.end();
         auto temp = *(end-1);
         return temp;
     }
-    void ForEach(void(*Func)(int))
+    void ForEach(void(*Func)(T))
     {
         for (auto element : stack) {
             Func(element);
         }
     }
-    void ForEach(int(*Func)(int))
+    void ForEach(T(*Func)(T))
     {
         for (auto i = stack.begin(); i != stack.end(); ++i) {
             *i = Func(*i);
         }
+    }
+    void Clear()
+    {
+        stack.clear();
     }
 };
 
