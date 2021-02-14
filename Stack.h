@@ -16,7 +16,7 @@ public:
     int Pop()
     {
         auto end = stack.end();
-        auto temp = *end;
+        auto temp = *(end-1);
         stack.pop_back();
         return temp;
     }
@@ -31,6 +31,18 @@ public:
     int Size()
     {
         return stack.size();
+    }
+    int Fetch()
+    {
+        auto end = stack.end();
+        auto temp = *(end-1);
+        return temp;
+    }
+    void ForEach(void(*Func)(int))
+    {
+        for (auto element : stack) {
+            Func(element);
+        }
     }
 };
 
