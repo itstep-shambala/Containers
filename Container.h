@@ -2,6 +2,7 @@
 #define STACK_CONTAINER_H
 
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -25,6 +26,10 @@ public:
         } else {
             return false;
         }
+    }
+    int Push_start()
+    {
+        container.push();
     }
 };
 
