@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Stack.h"
+#include "Queue.h"
 
 using namespace std;
 
@@ -14,6 +15,15 @@ public:
             cout << "Стэк пустой" << endl;
         } else {
             cout << "Стек содержит " << stack.Size() << " элементов" << endl;
+        }
+    }
+    static void PrintQueue(Queue queue)
+    {
+        if (queue.isEmpty()) {
+            cout << "Очередь пустая" << endl;
+        }
+        else {
+            cout << "Очередь содержит " << queue.Size() << " элементов" << endl;
         }
     }
 
