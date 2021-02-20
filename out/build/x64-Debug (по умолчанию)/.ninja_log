@@ -1,0 +1,23 @@
+# ninja log v5
+0	605	635346751	CMakeFiles/Stack.dir/main.cpp.obj	16c8cf9316b08044
+605	1264	635346752	Stack.exe	fe1f62467ec2e848
+1	334	635348549	CMakeFiles/Stack.dir/main.cpp.obj	16c8cf9316b08044
+334	613	635348549	Stack.exe	fe1f62467ec2e848
+0	426	635348767	CMakeFiles/Stack.dir/main.cpp.obj	16c8cf9316b08044
+427	593	635348767	Stack.exe	fe1f62467ec2e848
+0	349	635348858	CMakeFiles/Stack.dir/main.cpp.obj	16c8cf9316b08044
+350	645	635348858	Stack.exe	fe1f62467ec2e848
+0	403	635349316	CMakeFiles/Stack.dir/main.cpp.obj	16c8cf9316b08044
+404	546	635349316	Stack.exe	fe1f62467ec2e848
+1	396	635349412	CMakeFiles/Stack.dir/main.cpp.obj	16c8cf9316b08044
+397	552	635349412	Stack.exe	fe1f62467ec2e848
+0	797	635522381	CMakeFiles/Stack.dir/main.cpp.obj	16c8cf9316b08044
+797	2629	635522382	Stack.exe	fe1f62467ec2e848
+0	344	635523399	CMakeFiles/Stack.dir/main.cpp.obj	16c8cf9316b08044
+345	625	635523400	Stack.exe	fe1f62467ec2e848
+0	386	635523458	CMakeFiles/Stack.dir/main.cpp.obj	16c8cf9316b08044
+386	547	635523458	Stack.exe	fe1f62467ec2e848
+0	387	635523497	CMakeFiles/Stack.dir/main.cpp.obj	16c8cf9316b08044
+388	538	635523497	Stack.exe	fe1f62467ec2e848
+0	386	635523584	CMakeFiles/Stack.dir/main.cpp.obj	16c8cf9316b08044
+386	534	635523584	Stack.exe	fe1f62467ec2e848

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Stack.h"
+#include "Queue.h"
 #include "utils.h"
 
 using namespace std;
@@ -8,7 +9,23 @@ int main()
 {
     system("chcp 65001");
 
-    Stack temp;
+    Queue<int> queue;
+    queue.Push(15);
+    queue.Push(23);
+    queue.Push(-31);
+    queue.Push(123);
+    int temp = queue.Pop();
+    cout << "Pop() " << temp << endl;
+    temp = queue.Fetch();
+    cout << "Fetch() " << temp << endl;
+    Utils::PrintQueue(queue);
+    queue.ForEach(Utils::Print);
+    queue.ForEach(Utils::Plus5);
+    cout << endl;
+    queue.ForEach(Utils::Print);
+
+    /*
+    Stack<int> temp;
 
     Utils::PrintStack(temp);
     temp.Push(5);
@@ -29,6 +46,6 @@ int main()
     temp.ForEach(Utils::Plus5);
     cout << endl;
     temp.ForEach(Utils::Print);
-
+    */
     return 0;
 }

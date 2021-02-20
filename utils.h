@@ -8,7 +8,8 @@ using namespace std;
 
 class Utils {
 public:
-    static void PrintStack(Stack stack)
+    template <class T>
+    static void PrintStack(Stack<T> stack)
     {
         if (stack.isEmpty()) {
             cout << "Стэк пустой" << endl;
@@ -17,12 +18,25 @@ public:
         }
     }
 
-    static void Print(int number)
+    template <class T>
+    static void PrintQueue(Queue<T> queue)
+    {
+        if (queue.isEmpty()) {
+            cout << "Очередь пустая" << endl;
+        }
+        else {
+            cout << "Очередь содержит " << queue.Size() << " элементов" << endl;
+        }
+    }
+
+    template <class T>
+    static void Print(T number)
     {
         cout << number << " ";
     }
 
-    static int Plus5(int number)
+    template <class T>
+    static T Plus5(T number)
     {
         return number + 5;
     }
