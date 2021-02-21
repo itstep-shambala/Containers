@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Stack.h"
+#include "Queue.h"
 #include "utils.h"
 
 using namespace std;
@@ -7,7 +8,7 @@ using namespace std;
 int main()
 {
     system("chcp 65001");
-
+    //стек
     Stack temp;
 
     Utils::PrintStack(temp);
@@ -29,6 +30,31 @@ int main()
     temp.ForEach(Utils::Plus5);
     cout << endl;
     temp.ForEach(Utils::Print);
+
+    //очередь
+    Queue queue;
+    Utils::PrintQueue(queue);
+    temp.Push(5);
+    Utils::PrintQueue(queue);
+    temp.Push(10);
+    Utils::PrintQueue(queue);
+    int oneA = queue.Pop();
+    int twoB = queue.Pop();
+    Utils::PrintQueue(queue);
+    cout << oneA << " " << twoB << endl;
+    queue.Push(1);
+    queue.Push(2);
+    queue.Push(3);
+    Utils::PrintStack(queue);
+
+    queue.ForEach(Utils::Print);
+    queue.ForEach(Utils::Plus5);
+    cout << endl;
+    queue.ForEach(Utils::Print);
+
+
+
+
 
     return 0;
 }
