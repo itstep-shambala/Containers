@@ -13,31 +13,31 @@ class Stack : public Container<T>, IContainer<T>, IEnumerable<T> {
 public:
     void Push(T value) override
     {
-        container.push_back(value);
+        Container<T>::container.push_back(value);
     }
     T Pop() override
     {
-        auto end = container.end();
+        auto end = Container<T>::container.end();
         auto temp = *(end-1);
-        container.pop_back();
+        Container<T>::container.pop_back();
         return temp;
     }
     T Fetch() override
     {
-        auto end = container.end();
+        auto end = Container<T>::container.end();
         auto temp = *(end-1);
         return temp;
     }
 
     void ForEach(void(*Func)(T)) override
     {
-        for (auto element : container) {
+        for (auto element : Container<T>::container) {
             Func(element);
         }
     }
     void ForEach(T(*Func)(T)) override
     {
-        for (auto i = container.begin(); i != container.end(); ++i) {
+        for (auto i = Container<T>::container.begin(); i != Container<T>::container.end(); ++i) {
             *i = Func(*i);
         }
     }
