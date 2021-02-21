@@ -11,22 +11,22 @@ using namespace std;
 template<class T>
 class Queue : public Container<T>, IContainer<T>, IEnumerable<T> {
 public:
-    Container<int> container;
+    Container<T> container;
     void Push(T value) override // добавление в очередь
     {
-        container.Push_start(value);
+        container.push_back(value);
     }
     T Pop() override // удаление из очереди
     {
-        auto end = container.end();
-        auto temp = *(end - 1);
+        auto add = container.begin();
+        auto temp = *(add);
         container.pop_back();
         return temp;
     }
     T Fetch() override //принести
     {
-        auto start = container.start();
-        auto temp = *(start-1);
+        auto add = container.begin();
+        auto temp = *(add);
         return temp;
     }
 

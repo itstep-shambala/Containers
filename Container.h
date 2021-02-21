@@ -27,10 +27,6 @@ public:
             return false;
         }
     }
-    int Push_start()
-    {
-        container.push();
-    }
 };
 
 
