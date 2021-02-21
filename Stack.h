@@ -5,12 +5,14 @@
 #include "Container.h"
 #include "IContainer.h"
 #include "IEnumerable.h"
+#include <stack>
 
 using namespace std;
 
-template<class T>
+template<typename T>
 class Stack : public Container<T>, IContainer<T>, IEnumerable<T> {
 public:
+    Container<T> container;
     void Push(T value) override
     {
         container.push_back(value);
