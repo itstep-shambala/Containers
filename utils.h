@@ -3,17 +3,26 @@
 
 #include <iostream>
 #include "Stack.h"
+#include "Queue.h"
 
 using namespace std;
 
 class Utils {
-public:
-    static void PrintStack(Stack stack)
+public:/*
+    static void PrintStack(Stack<int> stack)
     {
         if (stack.isEmpty()) {
             cout << "Стэк пустой" << endl;
         } else {
             cout << "Стек содержит " << stack.Size() << " элементов" << endl;
+        }
+    } */
+    static void PrintQueue(Queue<int> queue)
+    {
+        if (queue.isEmpty()) {
+            cout << "Стэк пустой" << endl;
+        } else {
+            cout << "Стек содержит " << queue.Size() << " элементов" << endl;
         }
     }
 
